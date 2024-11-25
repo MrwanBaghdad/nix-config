@@ -8,5 +8,13 @@
         nixd
       ];
     };
+    devShells.golang = pkgs.mkShell {
+      name = "golang-experimental-shell";
+      meta.description = "Shell for golang development";
+      packages = with pkgs; [
+        golangci-lint
+        gosec
+      ];
+    };
   };
 }
