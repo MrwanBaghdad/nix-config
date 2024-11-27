@@ -5,12 +5,26 @@
     lg = "lazygit";
   };
 
+  home.file.".gitconfig" = {
+    text = ''
+      [core]
+      	editor = vim
+      [url "ssh://git@github.com/"]
+      	insteadOf = https://github.com/
+      [url "git@github.com:"]
+      	insteadOf = https://github.com/
+      [init]
+      	defaultBranch = main
+      [push]
+      	autoSetupRemote = true
+    '';
+  };
+
   # https://nixos.asia/en/git
   programs = {
     git = {
       enable = true;
       userName = "MrwanBaghdad";
-      userEmail = "johndoe@Marwans-Air.com";
       ignores = [ "*~" "*.swp" ];
       aliases = {
         ci = "commit";

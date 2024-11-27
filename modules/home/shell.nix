@@ -19,7 +19,20 @@
         if [[ $(uname -m) == 'arm64' ]]; then
                eval "$(/opt/homebrew/bin/brew shellenv)"
         fi
+        bindkey -v 
+        stty -xion
+        set keymap vi-command
+        eval "$(pyenv init -)"
+        eval "$(goenv init -)"
       '';
+
+      oh-my-zsh = {
+        enable = true;
+        theme = "robbyrussell";
+        plugins = [
+          "git"
+        ];
+      };
     };
 
     # Type `z <pat>` to cd to some directory
