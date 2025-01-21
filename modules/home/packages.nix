@@ -25,6 +25,7 @@
     less
 
     ssh-import-id
+    uv # fast python package manager
   ];
 
   # Programs natively supported by home-manager.
