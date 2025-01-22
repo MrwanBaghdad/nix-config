@@ -14,15 +14,14 @@
       enable = true;
       autosuggestion.enable = true;
       syntaxHighlighting.enable = true;
+      initExtra= ''
+        bindkey -v 
+      '';
       envExtra = ''
         # Custom zshrc goes here
         if [[ $(uname -m) == 'arm64' ]]; then
                eval "$(/opt/homebrew/bin/brew shellenv)"
         fi
-        bindkey -v 
-        stty -xion
-        set keymap vi-command
-        eval "$(pyenv init -)"
         eval "$(goenv init -)"
       '';
 
