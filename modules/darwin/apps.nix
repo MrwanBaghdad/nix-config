@@ -68,6 +68,7 @@
       "logseq"
       "bruno"
       "raycast"
+      "rectangle"
     ];
   };
 }

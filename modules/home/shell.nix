@@ -22,7 +22,7 @@
         if [[ $(uname -m) == 'arm64' ]]; then
                eval "$(/opt/homebrew/bin/brew shellenv)"
         fi
-        eval "$(goenv init -)"
+        # eval "$(goenv init -)"
       '';
 
       oh-my-zsh = {
