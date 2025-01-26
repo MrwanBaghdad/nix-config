@@ -26,6 +26,8 @@
 
     ssh-import-id
     uv # fast python package manager
+
+    devbox
   ];
 
   # Programs natively supported by home-manager.

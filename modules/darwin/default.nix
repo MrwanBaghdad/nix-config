@@ -29,6 +29,7 @@ in
   # More Marwans-Airs => https://github.com/ryan4yin/nix-darwin-kickstarter/blob/main/rich-demo/modules/system.nix
   system = {
     defaults = {
+      NSGlobalDomain.ApplePressAndHoldEnabled = false;
       dock = {
         autohide = true;
         # customize Hot Corners
