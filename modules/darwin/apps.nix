@@ -16,7 +16,6 @@
   # Related Discussion: https://discourse.nixos.org/t/darwin-again/29331
 
   environment.variables.EDITOR = "nvim";
-
   # TODO To make this work, homebrew need to be installed manually, see https://brew.sh
   # 
   # The apps installed by homebrew are not managed by nix, and not reproducible!
@@ -69,6 +68,7 @@
       "bruno"
       "raycast"
       "rectangle"
+      "monitorcontrol"
     ];
   };
 }
