@@ -30,6 +30,9 @@
     devbox
   ];
 
+  # Add uv tool bin dir to PATH (where `uv tool install` places executables)
+  home.sessionPath = [ "$HOME/.local/bin" ];
+
   # Programs natively supported by home-manager.
   # They can be configured in `programs.*` instead of using home.packages.
   programs = {

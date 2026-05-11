@@ -17,6 +17,7 @@ in
   # For home-manager to work.
   # https://github.com/nix-community/home-manager/issues/4026#issuecomment-1565487545
   users.users."marwan".home = "/Users/marwan";
+  system.primaryUser = "marwan";
 
   # Enable home-manager for "marwan" user
   home-manager.users."marwan" = {

@@ -17,12 +17,13 @@ in
   # For home-manager to work.
   # https://github.com/nix-community/home-manager/issues/4026#issuecomment-1565487545
   users.users."m.ahmed.22".home = "/Users/m.ahmed.22";
+  system.primaryUser = "m.ahmed.22";
 
   # Enable home-manager for "marwan" user
   home-manager.users."m.ahmed.22" = {
     imports = [ (self + /configurations/home/m.ahmed.22.nix) ];
   };
-
+  ids.gids.nixbld = 350;
   # Used for backwards compatibility, please read the changelog before changing.
   # $ darwin-rebuild changelog
   system.stateVersion = 4;

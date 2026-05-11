@@ -14,7 +14,7 @@
       enable = true;
       autosuggestion.enable = true;
       syntaxHighlighting.enable = true;
-      initExtra= ''
+      initExtra = ''
         bindkey -v 
       '';
       envExtra = ''

@@ -7,19 +7,32 @@ let
   inherit (inputs) self;
 in
 {
+  # Match the actual nixbld group GID on this system
+  ids.gids.nixbld = 350;
+
   # Use TouchID for `sudo` authentication
-  security.pam.enableSudoTouchIdAuth = true;
+  security.pam.services.sudo_local.touchIdAuth = true;
+
 
   # These users can add Nix caches.
   nix.settings.trusted-users = [ "root" "marwan" ];
 
-  imports = [./apps.nix];
+  # Binary caches to avoid building from source
+  nix.settings.substituters = [
+    "https://cache.nixos.org"
+    "https://nix-community.cachix.org" # needed for nixvim and other nix-community projects
+  ];
+  nix.settings.trusted-public-keys = [
+    "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
+    "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCUSeBc="
+  ];
+
+  imports = [ ./apps.nix ];
 
   environment.variables.EDITOR = "nvim";
 
   environment.systemPackages = with pkgs; [
     kitty
-    tabby
   ];
 
 
