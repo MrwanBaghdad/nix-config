@@ -8,14 +8,13 @@ let
 in
 {
   # Match the actual nixbld group GID on this system
-  ids.gids.nixbld = 350;
 
   # Use TouchID for `sudo` authentication
   security.pam.services.sudo_local.touchIdAuth = true;
 
 
   # These users can add Nix caches.
-  nix.settings.trusted-users = [ "root" "marwan" ];
+  nix.settings.trusted-users = [ "root" "marwan" "m.ahmed.22"];
 
   # Binary caches to avoid building from source
   nix.settings.substituters = [
