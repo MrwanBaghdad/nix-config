@@ -28,6 +28,9 @@
     uv # fast python package manager
 
     devbox
+
+    # GUI apps (user scope)
+    ghostty-bin
   ];
 
   # Add uv tool bin dir to PATH (where `uv tool install` places executables)
