@@ -62,6 +62,7 @@
     casks = [
       # "google-chrome" was already installed
       "spotify"
+      "cmux"
     ];
   };
 }
