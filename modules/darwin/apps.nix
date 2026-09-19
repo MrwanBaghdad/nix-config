@@ -67,7 +67,6 @@
       "bruno"
       "raycast"
       "monitorcontrol"
-      "aerospace"
     ];
   };
 }
