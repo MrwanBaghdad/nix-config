@@ -13,6 +13,10 @@ in
   security.pam.services.sudo_local.touchIdAuth = true;
 
 
+  # Determinate Nix manages the Nix installation/daemon; avoid nix-darwin's
+  # native Nix management conflicting with it during activation.
+  nix.enable = false;
+
   # These users can add Nix caches.
   nix.settings.trusted-users = [ "root" "marwan" "m.ahmed.22"];
 
@@ -64,7 +68,7 @@ in
     };
 
     keyboard = {
-      # enableKeyMapping = true;
+      enableKeyMapping = true;
       remapCapsLockToControl = true;
     };
   };

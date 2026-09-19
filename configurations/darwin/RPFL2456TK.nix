@@ -19,7 +19,7 @@ in
   users.users."m.ahmed.22".home = "/Users/m.ahmed.22";
   system.primaryUser = "m.ahmed.22";
 
-  # Enable home-manager for "marwan" user
+  # Enable home-manager for "m.ahmed.22" user
   home-manager.users."m.ahmed.22" = {
     imports = [ (self + /configurations/home/m.ahmed.22.nix) ];
   };
