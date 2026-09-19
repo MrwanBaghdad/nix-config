@@ -33,10 +33,20 @@ in
 
   imports = [ ./apps.nix ];
 
+  nixpkgs.config.allowUnfreePredicate = pkg:
+    builtins.elem (lib.getName pkg) [
+      "raycast"
+    ];
+
   environment.variables.EDITOR = "nvim";
 
   environment.systemPackages = with pkgs; [
     kitty
+    zed-editor
+    logseq
+    bruno
+    raycast
+    monitorcontrol
   ];
 
   services.aerospace = {

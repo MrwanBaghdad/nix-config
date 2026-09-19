@@ -61,12 +61,7 @@
     # TODO Feel free to add your favorite apps here.
     casks = [
       # "google-chrome" was already installed
-      "visual-studio-code"
       "spotify"
-      "logseq"
-      "bruno"
-      "raycast"
-      "monitorcontrol"
     ];
   };
 }
