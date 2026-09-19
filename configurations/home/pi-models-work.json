@@ -1,0 +1,62 @@
+{
+  "providers": {
+    "openai": {
+      "baseUrl": "http://localhost:36253",
+      "apiKey": "ANTHROPIC_API_KEY",
+      "api": "openai-completions"
+    },
+    "anthropic": {
+      "baseUrl": "http://localhost:36253",
+      "apiKey": "ANTHROPIC_API_KEY",
+      "api": "anthropic-messages"
+    },
+    "ollama": {
+      "baseUrl": "http://localhost:11434/v1",
+      "api": "openai-completions",
+      "apiKey": "ollama",
+      "models": [
+        {
+          "id": "gemma4:e4b"
+        }
+      ]
+    },
+    "mlx": {
+      "baseUrl": "http://localhost:9090/v1",
+      "api": "openai-completions",
+      "apiKey": "mlx",
+      "models": [
+        {
+          "id": "mlx-community/Qwen3.5-9B-MLX-4bit",
+          "name": "Qwen3.5 9B",
+          "compat": {
+            "supportsDeveloperRole": false,
+            "supportsReasoningEffort": false
+          }
+        }
+      ]
+    },
+    "omlx": {
+      "baseUrl": "http://127.0.0.1:9090/v1",
+      "api": "openai-completions",
+      "apiKey": "omlx",
+      "authHeader": true,
+      "models": [
+        {
+          "id": "Qwen3.5-9B-MLX-4bit",
+          "name": "Qwen3.5-9B-MLX-4bit",
+          "reasoning": false,
+          "input": [
+            "text",
+            "image"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          }
+        }
+      ]
+    }
+  }
+}

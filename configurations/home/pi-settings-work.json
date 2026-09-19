@@ -1,0 +1,19 @@
+{
+  "lastChangelogVersion": "0.83.0",
+  "defaultProvider": "openai",
+  "defaultModel": "gpt-5.3-codex",
+  "enableSkillCommands": true,
+  "defaultThinkingLevel": "medium",
+  "packages": [
+    "npm:pi-mcp-adapter",
+    "npm:pi-gemini-acp",
+    "npm:pi-subagents"
+  ],
+  "compaction": {
+    "enabled": false
+  },
+  "enableInstallTelemetry": false,
+  "quietStartup": true,
+  "theme": "dark",
+  "hideThinkingBlock": false
+}
