@@ -5,6 +5,7 @@
 let
   inherit (flake) inputs;
   inherit (inputs) self;
+  aerospaceSettings = builtins.fromTOML (builtins.readFile ../../configurations/home/aerospace.toml);
 in
 {
   # Match the actual nixbld group GID on this system
@@ -36,8 +37,12 @@ in
 
   environment.systemPackages = with pkgs; [
     kitty
-    aerospace
   ];
+
+  services.aerospace = {
+    enable = true;
+    settings = aerospaceSettings;
+  };
 
 
 
