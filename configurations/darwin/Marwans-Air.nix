@@ -24,6 +24,11 @@ in
     imports = [ (self + /configurations/home/marwan.nix) ];
   };
 
+  # Permit insecure electron package (needed by some dependencies)
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-39.8.10"
+  ];
+
   # Used for backwards compatibility, please read the changelog before changing.
   # $ darwin-rebuild changelog
   system.stateVersion = 4;
