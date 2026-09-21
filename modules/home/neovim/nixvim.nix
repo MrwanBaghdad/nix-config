@@ -63,7 +63,7 @@
       enable = true;
       servers = {
         hls = {
-          enable = true;
+          enable = false;
           installGhc = false; # Managed by Nix devShell
         };
         marksman.enable = true;

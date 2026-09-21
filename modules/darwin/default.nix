@@ -43,7 +43,6 @@ in
   environment.systemPackages = with pkgs; [
     kitty
     zed-editor
-    logseq
     bruno
     raycast
     monitorcontrol
